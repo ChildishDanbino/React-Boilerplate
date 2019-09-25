@@ -1,0 +1,66 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ProductTable Renders ProductTable Componnent when valid data passed 1`] = `
+<styled.div>
+  <styled.table>
+    <tbody>
+      <styled.tr>
+        <styled.th
+          key="0"
+        >
+          NAME
+        </styled.th>
+        <styled.th
+          key="1"
+        >
+          DESCRIPTION
+        </styled.th>
+        <styled.th
+          key="2"
+        >
+          PHOTO
+        </styled.th>
+        <styled.th
+          key="3"
+        >
+          QUANTITY
+        </styled.th>
+        <styled.th
+          key="4"
+        >
+          BUY NOW
+        </styled.th>
+      </styled.tr>
+      <styled.tr
+        key="734"
+      >
+        <styled.td>
+          Bio-ove
+        </styled.td>
+        <styled.td>
+          With a philosophical flourish Cato throws himself upon his sword; I quietly take to the ship.
+        </styled.td>
+        <styled.td>
+          <img
+            alt="product_image"
+            src="https://via.placeholder.com/64"
+          />
+        </styled.td>
+        <styled.td>
+          13
+        </styled.td>
+        <styled.td>
+          <styled.button
+            id="buy-button"
+            onClick={[Function]}
+          >
+            Buy Now
+          </styled.button>
+        </styled.td>
+      </styled.tr>
+    </tbody>
+  </styled.table>
+</styled.div>
+`;
+
+exports[`ProductTable Renders null when no products 1`] = `""`;
