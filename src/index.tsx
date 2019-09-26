@@ -4,6 +4,7 @@ import * as serviceWorker from './serviceWorker';
 import { Router } from "react-router";
 import { Provider } from "react-redux";
 import { createBrowserHistory } from 'history';
+import 'normalize.css';
 
 import Routes from 'modules/routes/components/routes/routes'
 
