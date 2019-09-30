@@ -15,16 +15,16 @@ applied but overall was not as much as a concern as building a project that coul
 
 ## Tooling
 
-- React:  [https://github.com/facebook/react](Github) 
-- Typescript: [https://github.com/microsoft/TypeScript](Giuthub)
-- React-Redux: [https://github.com/reduxjs/react-redux](Github)
-- Redux:  [https://github.com/reduxjs/redux](Github)
-- Reselect: [https://github.com/reduxjs/reselect](Github)
-- Redux-Saga: [https://github.com/redux-saga/redux-saga](Github)
-- Formik: [https://github.com/jaredpalmer/formik](Github)
-- Yup: [https://github.com/jquense/yup](Giuthub)
-- Styled Components: [https://github.com/styled-components/styled-components](Github)
-- Axios: [https://github.com/axios/axios](Github)
+- React:  [Github](https://github.com/facebook/react) 
+- Typescript: [Github](https://github.com/microsoft/TypeScript)
+- React-Redux: [Github](https://github.com/reduxjs/react-redux)
+- Redux:  [Github](https://github.com/reduxjs/redux)
+- Reselect: [Github](https://github.com/reduxjs/reselect)
+- Redux-Saga: [Github](https://github.com/redux-saga/redux-saga)
+- Formik: [Github](https://github.com/jaredpalmer/formik)
+- Yup: [Github](https://github.com/jquense/yup)
+- Styled Components: [Github](https://github.com/styled-components/styled-components)
+- Axios: [Github](https://github.com/axios/axios)
 
 ## Tooling Choices
  - Redux: After using tons of other state management options throughout the years I still find myself going
