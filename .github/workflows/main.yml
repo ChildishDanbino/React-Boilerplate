@@ -6,19 +6,26 @@ on:
     - master
 
 jobs:
-  install:
-    runs-on: ubuntu-latest
-    steps:
-    - uses: actions/checkout@v1
-    - name: Install and Setup Project
-      run: yarn install
+  env:
+    CI: true
 
-      test:
-        needs: install
-        steps:
+  jobs:
+
+    install_project:
+      name: Install and Configure Project
+      runs-on: ubuntu-latest
+      steps:
+        - uses: actions/checkout@v1
+        - name: Install and Setup Project
+          run: yarn install
+
+    lint_tests:
+      name: My second job
+      needs: install
+      steps:
         - name: Lint / Tests
           run: |
             yarn lint
             yarn test
-    env:
-      CI: true
+
+
