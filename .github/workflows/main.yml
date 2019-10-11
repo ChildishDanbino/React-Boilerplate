@@ -5,14 +5,13 @@ on:
     branches:
     - master
 
-  env:
-    CI: true
-
   jobs:
 
     install_project:
       name: Install and Configure Project
       runs-on: ubuntu-latest
+      env:
+        CI: true
       steps:
         - uses: actions/checkout@v1
         - name: Install and Setup Project
@@ -21,6 +20,8 @@ on:
     lint_tests:
       name: My second job
       needs: install
+      env:
+        CI: true
       steps:
         - name: Lint / Tests
           run: |
