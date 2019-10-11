@@ -16,3 +16,14 @@ jobs:
         - name: Install and Setup Project
           run: yarn install
 
+  lint_tests:
+    runs-on: ubuntu-latest
+    name: My second job
+    needs: install_project
+    env:
+      CI: true
+    steps:
+      - name: Lint / Tests
+    run: |
+      yarn lint
+      yarn test
