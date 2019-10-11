@@ -65,3 +65,6 @@ You will also see any lint / tslint errors in the console.
 ### `yarn test`
 
 Launches the test runner using jest<br>
+
+### Pull Requests
+Testing Github Actions
