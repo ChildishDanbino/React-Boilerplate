@@ -11,6 +11,11 @@ pipeline {
                 sh 'yarn install'
             }
         }
+         stage('Run Lint') {
+             steps {
+                sh 'yarn lint'
+                }
+            }
         stage('Unit Tests') {
                     steps {
                         sh 'yarn test'
