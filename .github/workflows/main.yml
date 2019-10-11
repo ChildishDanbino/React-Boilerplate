@@ -16,15 +16,3 @@ jobs:
         - name: Install and Setup Project
           run: yarn install
 
-    lint_tests:
-      name: My second job
-      needs: install
-      env:
-        CI: true
-      steps:
-        - name: Lint / Tests
-          run: |
-            yarn lint
-            yarn test
-
-
