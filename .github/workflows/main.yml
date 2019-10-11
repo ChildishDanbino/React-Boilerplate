@@ -18,11 +18,12 @@ jobs:
 
   lint_tests:
     runs-on: ubuntu-latest
-    name: My second job
+    name: Run Linter and Unit Tests
     needs: install_project
     env:
       CI: true
     steps:
+      - uses: actions/checkout@v1
       - name: Lint / Tests
         run: |
           yarn lint
