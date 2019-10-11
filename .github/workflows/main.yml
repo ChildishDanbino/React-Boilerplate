@@ -26,5 +26,6 @@ jobs:
       - uses: actions/checkout@v1
       - name: Lint / Tests
         run: |
+          yarn install
           yarn lint
           yarn test
