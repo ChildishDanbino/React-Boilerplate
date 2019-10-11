@@ -3,11 +3,10 @@ name: CI
 on:
   pull_request:
     branches:
-    - master
+      - master
 
-  jobs:
-
-    install_project:
+jobs:
+  install_project:
       name: Install and Configure Project
       runs-on: ubuntu-latest
       env:
