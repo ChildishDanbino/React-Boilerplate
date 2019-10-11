@@ -49,6 +49,13 @@ applied but overall was not as much as a concern as building a project that coul
  - Axios: Common promise based request lib. Great when you need simple ways to make basic api calls. Request Promise
  is also a great alternative.
 
+## CI/CD
+
+ I wanted to play around with a couple CI/CD options including Jenkins and Github Actions.
+ 
+ - Jenkins: Setup via Jenkinsfile and using the following tutorial [Jenkins Tutorial for React](https://jenkins.io/doc/tutorials/build-a-node-js-and-react-app-with-npm/)
+ - GitHub Actions: Setup using Github Actions Docs - Note: This job should be combined into one step but I wanted to break it out into steps
+   as an example of doing multiple steps in one pipeline [Github Actions WorkFlow Syntax](https://help.github.com/en/articles/workflow-syntax-for-github-actions)
 
 ## Available Scripts
 
