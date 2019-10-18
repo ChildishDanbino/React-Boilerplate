@@ -29,17 +29,3 @@ jobs:
           yarn install
           yarn lint
           yarn test
-
-  deploy:
-    runs-on: ubuntu-latest
-    name: Deploy
-    needs: lint_tests
-    env:
-      CI: true
-    steps:
-      - uses: primer/deploy@master
-      - name: Deploy to Now by Zenit
-        secrets: [
-          "GITHUB_ACCESS_TOKEN",
-          "NOW_TOKEN",
-        ]
