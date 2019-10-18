@@ -37,7 +37,7 @@ const LoginForm = ({values, handleChange, handleSubmit, errors, touched, loading
                 id="username"
                 value={values.username}
                 onChange={handleChange}
-                placeholder="Username"
+                placeholder="NEW BRANCH AWE YEA"
                 error={Boolean(errors.username && touched.username)}
             />
             {errors.username && touched.username && <InputFeedback>{errors.username}</InputFeedback>}
