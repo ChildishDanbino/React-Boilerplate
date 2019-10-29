@@ -1,6 +1,9 @@
 {
 	"compilerOptions": {
 		"baseUrl": "src",
+		"paths": {
+			"test-utils": ["../__tests__/utils/test-utils"]
+		},
 		"target": "es5",
 		"lib": [
 			"dom",
@@ -24,5 +27,5 @@
 		"src",
 		"**/*.ts",
 		"**/*.tsx"
-	],
+	]
 }
