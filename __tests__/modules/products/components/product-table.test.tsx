@@ -1,6 +1,7 @@
 import React from 'react';
-import { shallow } from 'enzyme';
-import ProductTable from '../../../../src/modules/products/components/product-table';
+import { render, fireEvent } from 'test-utils'
+import '@testing-library/jest-dom/extend-expect';
+import ProductTable from 'modules/products/components/product-table';
 
 describe('ProductTable', () => {
     it('Renders ProductTable Componnent when valid data passed', () => {
@@ -15,17 +16,17 @@ describe('ProductTable', () => {
             },
         ];
 
-        const wrapper = shallow(<ProductTable products={mockProductData} />);
-        expect(wrapper).toMatchSnapshot();
+        const { asFragment } = render(<ProductTable products={mockProductData} />);
+        expect(asFragment()).toMatchSnapshot();
     });
 
     it('Renders null when no products', () => {
-        const wrapper = shallow(<ProductTable products={[]} />);
-        expect(wrapper).toMatchSnapshot();
-        expect(wrapper.find('#buy-button').length).toEqual(0);
+        const { queryByTestId } = render(<ProductTable products={[]} />);
+        expect(queryByTestId('buy-now')).toBeNull()
     });
 
     it('Alerts the user when Buy Now Clicked', () => {
+        window.alert = jest.fn();
         const mockProductData = [
             {
                 "category": 1,
@@ -37,12 +38,10 @@ describe('ProductTable', () => {
             },
         ];
 
-        const wrapper = shallow(<ProductTable products={mockProductData} />);
-        expect(wrapper.find('#buy-button').length).toEqual(1);
+        const { getByText } = render(<ProductTable products={mockProductData} />);
+        expect(getByText('Buy Now')).toBeInTheDocument();
+        fireEvent.click(getByText("Buy Now"));
         //@ts-ignore
-        wrapper.instance().onClick = jest.fn();
-        wrapper.find('#buy-button').simulate('click');
-        //@ts-ignore
-        expect(wrapper.instance().onClick.mock.calls.length).toBe(1);
+        expect(window.alert.mock.calls.length).toBe(1);
     });
 });

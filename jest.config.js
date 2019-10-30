@@ -1,7 +1,13 @@
 module.exports = {
 	preset: 'ts-jest',
-	testEnvironment: 'node',
+	testEnvironment: 'jsdom',
 	testMatch: ["**/__tests__/**/*.ts?(x)", "**/?(*.)+(test).ts?(x)"],
-	snapshotSerializers: ["enzyme-to-json/serializer"],
-	setupFilesAfterEnv: ["<rootDir>/src/setupTests.ts"]
-};
+	modulePathIgnorePatterns: [
+		"<rootDir>/__tests__/utils",
+	],
+	moduleDirectories: [
+		'node_modules',
+		"<rootDir>/__tests__/utils",
+		"<rootDir>/src"
+	],
+}

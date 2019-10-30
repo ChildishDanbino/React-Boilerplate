@@ -1,10 +1,10 @@
-import React from 'react';
-import { shallow } from 'enzyme';
-import Button from '../../../src/modules/common/button/button';
+import React from 'react'
+import { render } from 'test-utils';
+import Button from 'modules/common/button/button';
 
 describe('Button', () => {
-    it('Renders Button Componnent', () => {
-        const wrapper = shallow(<Button />);
-        expect(wrapper).toMatchSnapshot();
+    it('Renders Button Component', () => {
+        const { asFragment } = render(<Button />);
+        expect(asFragment()).toMatchSnapshot();
     });
 });

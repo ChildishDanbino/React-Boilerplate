@@ -1,39 +1,9 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Button Renders Button Componnent 1`] = `
-<StyledComponent
-  forwardedComponent={
-    Object {
-      "$$typeof": Symbol(react.forward_ref),
-      "attrs": Array [],
-      "componentStyle": ComponentStyle {
-        "componentId": "sc-bdVaJa",
-        "isStatic": false,
-        "rules": Array [
-          "
-  background: #1f7fbf;
-  color: #afe4fc
-  display: flex;
-  font-family: 'Oswald', sans-serif;
-  font-size: 14px;
-  justify-content: center;
-  outline: 0;
-  padding: 15px;
-  width: 100%;
-",
-        ],
-      },
-      "displayName": "styled.button",
-      "foldedComponentIds": Array [],
-      "render": [Function],
-      "styledComponentId": "sc-bdVaJa",
-      "target": "button",
-      "toString": [Function],
-      "usesTheme": false,
-      "warnTooManyClasses": [Function],
-      "withComponent": [Function],
-    }
-  }
-  forwardedRef={null}
-/>
+exports[`Button Renders Button Component 1`] = `
+<DocumentFragment>
+  <button
+    class="sc-bdVaJa ieqGcc"
+  />
+</DocumentFragment>
 `;

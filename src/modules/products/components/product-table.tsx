@@ -55,7 +55,7 @@ class ProductTable extends PureComponent<IProducts, {}> {
                     <TableData>{<img src={logo} alt="product_image" />}</TableData>
                     <TableData>{quantity}</TableData>
                     <TableData>
-                        <Button id="buy-button" onClick={()=> this.onClick(name)}>
+                        <Button onClick={()=> this.onClick(name)}>
                             Buy Now
                         </Button>
                     </TableData>
