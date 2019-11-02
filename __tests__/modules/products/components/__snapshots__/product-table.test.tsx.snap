@@ -3,56 +3,56 @@
 exports[`ProductTable Renders ProductTable Componnent when valid data passed 1`] = `
 <DocumentFragment>
   <div
-    class="sc-bwzfXH EfFRI"
+    class="sc-bwzfXH iyXQWR"
   >
     <table
       class="sc-htpNat KtFsv"
     >
       <tbody>
         <tr
-          class="sc-bxivhb jgXbSX"
+          class="sc-bxivhb eqWZMb"
         >
           <th
-            class="sc-ifAKCX jhXccs"
+            class="sc-ifAKCX iCNBXQ"
           >
             NAME
           </th>
           <th
-            class="sc-ifAKCX jhXccs"
+            class="sc-ifAKCX iCNBXQ"
           >
             DESCRIPTION
           </th>
           <th
-            class="sc-ifAKCX jhXccs"
+            class="sc-ifAKCX iCNBXQ"
           >
             PHOTO
           </th>
           <th
-            class="sc-ifAKCX jhXccs"
+            class="sc-ifAKCX iCNBXQ"
           >
             QUANTITY
           </th>
           <th
-            class="sc-ifAKCX jhXccs"
+            class="sc-ifAKCX iCNBXQ"
           >
             BUY NOW
           </th>
         </tr>
         <tr
-          class="sc-bxivhb jgXbSX"
+          class="sc-bxivhb eqWZMb"
         >
           <td
-            class="sc-EHOje loBKZc"
+            class="sc-EHOje eWHMDo"
           >
             Bio-ove
           </td>
           <td
-            class="sc-EHOje loBKZc"
+            class="sc-EHOje eWHMDo"
           >
             With a philosophical flourish Cato throws himself upon his sword; I quietly take to the ship.
           </td>
           <td
-            class="sc-EHOje loBKZc"
+            class="sc-EHOje eWHMDo"
           >
             <img
               alt="product_image"
@@ -60,12 +60,12 @@ exports[`ProductTable Renders ProductTable Componnent when valid data passed 1`]
             />
           </td>
           <td
-            class="sc-EHOje loBKZc"
+            class="sc-EHOje eWHMDo"
           >
             13
           </td>
           <td
-            class="sc-EHOje loBKZc"
+            class="sc-EHOje eWHMDo"
           >
             <button
               class="sc-bdVaJa cIoHTR"
