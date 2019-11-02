@@ -1,19 +1,18 @@
-import React, { PureComponent } from 'react';
+import React, { useEffect} from 'react';
 import styled from 'styled-components';
-import { connect } from 'react-redux'
-import { getProducts } from 'redux/modules/products'
-import { getCategories, setSelectedCategory } from 'redux/modules/categories'
+import { useSelector, useDispatch } from 'react-redux'
+import { getProductsAndCategories} from 'redux/modules/products'
+import { setSelectedCategory } from 'redux/modules/categories'
 import { getTableData, getCategoryCounts } from 'redux/selectors/products'
 
 import Spinner from 'modules/common/spinner/spinner'
 import Button from 'modules/common/button/button'
 
 import ProductTable from 'modules/products/components/product-table'
-import { getActiveCategory, getCategoryNames } from 'redux/selectors/categories';
 
 import { ReduxStore } from 'types/store'
 import { IProduct } from 'types/product'
-import { ICategory } from 'types/categories'
+import { ICategoryCount } from 'types/categories'
 
 interface IProps {
     categoriesLoaded: boolean
@@ -38,57 +37,39 @@ const SpinnerWrapper = styled.div`
     margin-top: 20%;
 `;
 
-class Products extends PureComponent<IProps, {}> {
-    componentDidMount() {
-        this.props.getProducts();
-        this.props.getCategories();
-    }
+const Products = () => {
+    const dispatch = useDispatch();
+    const tableData = useSelector(getTableData);
+    const categories = useSelector(getCategoryCounts);
+    const categoriesLoaded = useSelector((state: ReduxStore) => state.categories.loaded);
+    const productsLoaded = useSelector((state: ReduxStore) => state.products.loaded);
+    const dataLoaded = categoriesLoaded && productsLoaded;
 
-    setActiveCategory = (category: string) => {
-        this.props.setSelectedCategory(category)
-    };
+    useEffect(() => {
+        dispatch(getProductsAndCategories());
+    }, [dispatch]);
 
-    render() {
-        const { tableData, categoriesLoaded, productsLoaded, categories } = this.props;
-        const dataLoaded = categoriesLoaded && productsLoaded;
-
-        return !dataLoaded ?
-            <SpinnerWrapper>
-                <Spinner
-                    color="black"
-                    large
-                />
-            </SpinnerWrapper> : (
-                <div>
-                    <Layout>
-                        {categories.map((category: ICategory) =>
-                            <Button
-                                onClick={() => this.setActiveCategory(category.name)}
-                                key={category.name}
-                            >
-                                {category.name} ({category.length})
-                            </Button>
-                        )}
-                    </Layout>
-                    <ProductTable products={tableData}/>
-                </div>
-            );
-    };
-}
-
-const mapStateToProps = (state: ReduxStore) => {
-    return {
-        activeCategory: getActiveCategory(state),
-        categoriesLoaded: state.categories.loaded,
-        categoryNames: getCategoryNames(state),
-        tableData: getTableData(state),
-        productsLoaded: state.products.loaded,
-        categories: getCategoryCounts(state)
-    }
+    return !dataLoaded ?
+        <SpinnerWrapper>
+            <Spinner
+                color="black"
+                large
+            />
+        </SpinnerWrapper> : (
+            <div>
+                <Layout>
+                    {categories.map((category: ICategoryCount) =>
+                        <Button
+                            onClick={() => dispatch(setSelectedCategory(category.name))}
+                            key={category.name}
+                        >
+                            {category.name} ({category.length})
+                        </Button>
+                    )}
+                </Layout>
+                <ProductTable products={tableData}/>
+            </div>
+        );
 };
 
-export default connect(mapStateToProps, {
-    getProducts,
-    getCategories,
-    setSelectedCategory
-})(Products)
+export default Products;
