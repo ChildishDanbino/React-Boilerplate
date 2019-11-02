@@ -1,4 +1,4 @@
-import React from 'react'
+import React from 'react';
 import SpinKit from 'react-spinkit';
 
 import styled from 'styled-components';
@@ -8,21 +8,21 @@ const LargeSpinner = styled(SpinKit)`
 `;
 
 interface IProps {
-    color: string
-    name: string | any
-    large?: boolean
+  color: string;
+  name: string | any;
+  large?: boolean;
 }
 
 const Spinner = (props: IProps) => {
-    const Spinner = props.large ? LargeSpinner : SpinKit;
+  const Spinner = props.large ? LargeSpinner : SpinKit;
 
-    return <Spinner color={props.color} name={props.name} />
+  return <Spinner color={props.color} name={props.name} />;
 };
 
 Spinner.defaultProps = {
-    name: 'cube-grid',
-    color: 'white',
-    number: 1
+  name: 'cube-grid',
+  color: 'white',
+  number: 1
 };
 
-export default Spinner
+export default Spinner;

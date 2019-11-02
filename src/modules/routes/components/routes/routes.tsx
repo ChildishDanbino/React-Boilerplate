@@ -8,14 +8,14 @@ import COMPONENTS from 'modules/routes/constants/components';
 import VIEWS from 'modules/routes/constants/views';
 
 const Routes = () => (
-    <Switch>
-        <PublicRoute path={makePath(VIEWS.LOGIN)} component={COMPONENTS.LOGIN} />
-        <PrivateRoute
-            path={makePath(VIEWS.PRODUCTS)}
-            component={COMPONENTS.PRODUCTS}
-        />
-        <Redirect to={makePath(VIEWS.PRODUCTS)} />
-    </Switch>
+  <Switch>
+    <PublicRoute path={makePath(VIEWS.LOGIN)} component={COMPONENTS.LOGIN} />
+    <PrivateRoute
+      path={makePath(VIEWS.PRODUCTS)}
+      component={COMPONENTS.PRODUCTS}
+    />
+    <Redirect to={makePath(VIEWS.PRODUCTS)} />
+  </Switch>
 );
 
 export default Routes;
