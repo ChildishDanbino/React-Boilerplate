@@ -1,5 +1,5 @@
 const makePath = (path: string) => {
-    return `/${path}`;
+  return `/${path}`;
 };
 
 export default makePath;

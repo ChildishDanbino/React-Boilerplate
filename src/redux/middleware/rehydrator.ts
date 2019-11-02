@@ -1,5 +1,5 @@
-import { Action } from 'redux'
-import { ReduxStore } from 'types/store'
+import { Action } from 'redux';
+import { ReduxStore } from 'types/store';
 // import { types as typesApp } from 'redux/modules/app';
 // import {
 //     initialState as authInitialState,
@@ -11,12 +11,12 @@ import { ReduxStore } from 'types/store'
  * depending on the action dispatched
  */
 const rehydrator = (state: ReduxStore, action: Action) => {
-    switch (action.type) {
-        case 'LOGOUT':
-            return undefined;
-        default:
-            return state;
-    }
+  switch (action.type) {
+    case 'LOGOUT':
+      return undefined;
+    default:
+      return state;
+  }
 };
 
 export default rehydrator;
