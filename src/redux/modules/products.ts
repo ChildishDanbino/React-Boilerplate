@@ -7,6 +7,7 @@ export const types = {
     LOAD_FAIL:  'gooee/products/LOAD_FAIL',
 
     GET_PRODUCTS: 'gooee/products/GET_PRODUCTS',
+    GET_PRODUCTS_AND_CATEGORIES: 'gooee/products/GET_PRODUCTS_AND_CATEGORIES',
 };
 
 interface IAction extends Action {
@@ -51,5 +52,11 @@ export default function reducer(state = initialState, action: IAction) {
 export function getProducts() {
     return {
         type: types.GET_PRODUCTS,
+    };
+}
+
+export function getProductsAndCategories() {
+    return {
+        type: types.GET_PRODUCTS_AND_CATEGORIES,
     };
 }

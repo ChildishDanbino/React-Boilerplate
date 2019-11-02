@@ -3,7 +3,7 @@ export interface ICategory {
     name: string
 }
 
-export interface ICategory {
+export interface ICategoryCount {
     name: string
     length: number
 }
